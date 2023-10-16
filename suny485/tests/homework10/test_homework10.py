@@ -1,33 +1,36 @@
 import pytest
-import sys
-import os
 
-current_directory = os.path.dirname(os.path.abspath(__file__))
-parent_directory = os.path.abspath(os.path.join(current_directory, "..", ".."))
-sys.path.append(parent_directory)
 
 from suny485.projects.homework10.fruit_query import is_it_a_fruit
 
+
 def test_1():
-    assert is_it_a_fruit('apple') == True
+    assert is_it_a_fruit('apple') is True
+
 
 def test_2():
-    assert is_it_a_fruit('pear') == True
+    assert is_it_a_fruit('pear') is True
+
 
 def test_3():
-    assert is_it_a_fruit('banana') == False
+    assert is_it_a_fruit('banana') is False
+
 
 def test_4():
-    assert is_it_a_fruit('grape') == True
+    assert is_it_a_fruit('grape') is True
+
 
 def test_5():
-    assert is_it_a_fruit('pineapple') == False
+    assert is_it_a_fruit('pineapple') is False
+
 
 def test_6():
-    assert is_it_a_fruit('') == False
+    assert is_it_a_fruit('') is False
+
 
 def test_7():
-    assert is_it_a_fruit('1') == False
+    assert is_it_a_fruit('1') is False
+
 
 if __name__ == "__main__":
     pytest.main(["test_homework10.py"])

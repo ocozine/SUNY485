@@ -1,6 +1,7 @@
 import pytest
 from suny485.projects.homework11.fruit_formal import get_formal_name
 
+
 # Parametrize the test for valid fruit names
 @pytest.mark.parametrize("fruit_name, formal_name", [
     ('apple', 'Malus domestica'),
@@ -28,6 +29,7 @@ from suny485.projects.homework11.fruit_formal import get_formal_name
 def test_valid_fruit(fruit_name, formal_name):
     assert get_formal_name(fruit_name) == formal_name
 
+
 # Parametrize the test for invalid fruit names
 @pytest.mark.parametrize("fruit_name", [
     'boba',
@@ -36,9 +38,11 @@ def test_valid_fruit(fruit_name, formal_name):
     '',
     '!',
 
+
 ])
 def test_invalid_fruit(fruit_name):
     assert get_formal_name(fruit_name) == 'Unknown'
+
 
 if __name__ == "__main__":
     pytest.main()
