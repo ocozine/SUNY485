@@ -23,7 +23,7 @@ def compute_complexity(data):
 
 def evaluate_strength(password):
     """
-        For the supplied `password`, evaluate whether the password is strong enough
+        For the supplied `password`, evaluate if the password is strong enough
         to be acceptable.
 
         :param password: str, attempted password

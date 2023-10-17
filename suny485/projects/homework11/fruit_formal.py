@@ -24,5 +24,5 @@ def get_formal_name(fruit):
     }
 
     formal_name = fruit_dict.get(fruit, 'Unknown')
-    
+
     return formal_name
