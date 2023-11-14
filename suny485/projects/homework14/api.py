@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from . password_utilities import evaluate_strength
+from suny485.projects.homework14.password_utilities import evaluate_strength
 
 app = Flask(__name__)
 
