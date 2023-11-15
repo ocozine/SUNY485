@@ -87,7 +87,7 @@ def test_empty_password(client):
         assert response.status_code == 200
 
 
-# Testing LiveAPI
+@pytest.mark.live_api
 class TestLiveAPI:
     @pytest.fixture
     def client(self):
